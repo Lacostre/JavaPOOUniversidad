@@ -12,31 +12,30 @@ import java.util.Calendar;
  *
  * @author Marcelo
  */
-public class Profesor extends Persona {
-    protected String Contrato;
+public class Docente extends Persona {
+    protected String[] Asignaturas;
     protected String Titulo;
- 
-    public Profesor(String contrato, String titulo, String carnetIdentidad, String nombre, Calendar fechaNacimiento) {
+    protected int AniosExp;
+    
+    public Docente(int exp, String asignaturas[], String titulo, String carnetIdentidad, String nombre, Calendar fechaNacimiento) {
         super(carnetIdentidad, nombre, fechaNacimiento);
-        this.Contrato = contrato;
+        this.Asignaturas= asignaturas;
         this.Titulo = titulo;
+        this.AniosExp = exp ;
     }
 
-    public Profesor(String contrato, String titulo) {
-        this.Contrato = contrato;
+    public Docente(String asignaturas[], String titulo, int exp) {
+        this.Asignaturas = asignaturas;
         this.Titulo = titulo;
+        this.AniosExp=exp;
     }
 
-    public Profesor() {
-        
+    public String[] getAsignaturas() {
+        return Asignaturas;
     }
 
-    public String getContrato() {
-        return Contrato;
-    }
-
-    public void setContrato(String Contrato) {
-        this.Contrato = Contrato;
+    public void setAsignaturas(String[] Asignaturas) {
+        this.Asignaturas = Asignaturas;
     }
 
     public String getTitulo() {
@@ -47,14 +46,24 @@ public class Profesor extends Persona {
         this.Titulo = Titulo;
     }
 
+    public int getExp() {
+        return AniosExp;
+    }
+
+    public void setExp(int Exp) {
+        this.AniosExp = Exp;
+    }
+
+    
     @Override
     public String toString() {
         return "Profesor{" 
                 + "Id=" + this.Id 
                 + ", CarnetIdentidad=" + this.CarnetIdentidad 
                 + ", Nombre=" + this.Nombre 
+                + ", Anios de Experiecia=" + this.AniosExp 
                 + ", FechaNacimiento=" + Utilitarios.getFechaCalendario(this.FechaNacimiento)
-                + ", Contrato=" + Contrato + ", Titulo=" + Titulo + '}';
+                + ", Asignaturas=" + Asignaturas + ", Titulo=" + Titulo + '}';
     }
     
 }
