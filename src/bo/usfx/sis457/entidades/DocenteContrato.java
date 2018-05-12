@@ -8,10 +8,7 @@ package bo.usfx.sis457.entidades;
 import bo.usfx.sis457.Utilitarios;
 import java.util.Calendar;
 
-/**
- *
- * @author pablo
- */
+
 public class DocenteContrato extends Docente{
     protected String NumContrato;
     public DocenteContrato(String numContrato, int exp, String[] asignaturas, String titulo, String carnetIdentidad, String nombre, Calendar fechaNacimiento) {

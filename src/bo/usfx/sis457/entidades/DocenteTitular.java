@@ -8,10 +8,7 @@ package bo.usfx.sis457.entidades;
 import bo.usfx.sis457.Utilitarios;
 import java.util.*;
 
-/**
- *
- * @author pablo
- */
+
 public class DocenteTitular  extends Docente{
     protected String ExamenCompetencia;
     
